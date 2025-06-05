@@ -46,6 +46,7 @@ export const register = async (req, res) => {
         console.log(error);
     }
 }
+
 export const login = async (req, res) => {
     try {
         const { email, password, role } = req.body;
@@ -101,6 +102,7 @@ export const login = async (req, res) => {
         console.log(error);
     }
 }
+
 export const logout = async (req, res) => {
     try {
         return res.status(200).cookie("token", "", { maxAge: 0 }).json({
@@ -111,6 +113,7 @@ export const logout = async (req, res) => {
         console.log(error);
     }
 }
+
 export const updateProfile = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, bio, skills } = req.body;
@@ -146,6 +149,8 @@ export const updateProfile = async (req, res) => {
         if(cloudResponse){
             user.profile.resume = cloudResponse.secure_url // save the cloudinary url
             user.profile.resumeOriginalName = file.originalname // Save the original file name
+            console.log(file);
+            
         }
 
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import Navbar from '../shared/Navbar'
 import { Label } from '../ui/label'
 import { Input } from '../ui/input'
@@ -67,6 +67,9 @@ const Signup = () => {
             navigate("/");
         }
     },[])
+
+
+
     return (
         <div>
             <Navbar />
