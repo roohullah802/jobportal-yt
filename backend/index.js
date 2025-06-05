@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:['https://jobportal-yt-three.vercel.app','http://localhost:5173'],
+    origin:'https://jobportal-yt-three.vercel.app',
     credentials:true
 }
 
