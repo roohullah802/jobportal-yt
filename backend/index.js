@@ -18,7 +18,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
     origin:'https://jobportal-yt-three.vercel.app',
-    credentials:true
+    credentials:true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // ✅ optional but good practice
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }
 
 app.use(cors(corsOptions));
